@@ -64,12 +64,27 @@ namespace Exercise_5
         {
             node ren, san;
             ren = san = null;
-            if (search(rollNo, ref previous, ref current) == false)
+            if (search(rollNo, ref ren, ref san) == false)
                 return false;
-            previous.next = current.next;
-            if (current == START)
-                START = START.next;
+            ren.next = san.next;
+            if (san == ren)
+                ren = ren.next;
             return true;
+        }
+
+        public bool search(int rollNo, ref node previous, ref node current)
+        {
+            ren = san;
+            ren = ren.next;
+            while ((ren != null) && (rollNo != ren.rollNumber))
+            {
+                previous = ren;
+                current = ren.next;
+            }
+            if (ren == null)
+                return false;
+            else
+                return true;
         }
     }
 
