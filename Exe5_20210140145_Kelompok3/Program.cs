@@ -2,5 +2,8 @@
 
 namespace Exercise_5
 {
-
+    class program
+    {
+        
+    }
 }
