@@ -12,8 +12,14 @@ namespace Exercise_5
 
     class list
     {
+        node ren;
 
-    }
+        public list()
+        {
+            ren = null;
+        }
+
+    } 
 
     class program
     {
